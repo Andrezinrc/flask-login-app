@@ -43,7 +43,7 @@ def login():
 @app.route("/login_sucesso", methods=['GET'])
 @login_required
 def login_sucesso():
-    return redirect("https://jogodacobrinha-weld.vercel.app/")
+    return f"Login feito com sucesso para o usuario {current_user.nome}"
 
 @app.route("/logout")
 @login_required
