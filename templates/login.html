@@ -14,7 +14,7 @@
         <input class="botao" type="submit" value="Login">
         <a class="fazer-cadastro" href="/cadastro">Fazer cadastro</a>
         {% for mensagem in get_flashed_messages() %}
-            <p class="aviso-login">{{ mensagem }}</p>
+            <p class="aviso-login">{{ mensagem }}</p><br>
         {% endfor %}
     </form>
 </body>
