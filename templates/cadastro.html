@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename="style.css") }}"></link>
-    <title>Cadastro</title>
-</head>
-<body>
-    <form class="formulario" action="/cadastro" method="post">
-      <h1 class="titulo-form">Cadastro</h1>
-      <input type="text" name="nome" placeholder="digite seu nome">
-      <input type="text" name="email" placeholder="digite seu e-mail">
-      <input type="password" name="senha" placeholder="crie sua senha">
-      <input type="password" name="csenha" placeholder="confirme sua senha">
-      <input class="botao" type="submit" value="cadastrar">
-      <a class="fazer-cadastro" href="/">Ja tenho cadastro</a>
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<div class="container mt-5">
+  <form action="" method="post" class="mx-auto" style="max-width: 400px;">
+    <h1 class="titulo">Cadastro</h1>
+    <div class="form-group">
+      <label>Nome</label>
+      {{ form.nome(class="form-control", placeholder="Informe seu e-mail") }}
+    </div>
+    <div class="form-group">
+      <label>E-mail</label>
+      {{ form.email(class="form-control", placeholder="Informe seu e-email") }}
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      {{ form.senha(class="form-control", placeholder="Crie sua senha") }}
+    </div>
+    <div class="form-group">
+      <label>Confirme a senha</label>
+      {{ form.csenha(class="form-control", placeholder="Confirme sua senha") }}
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    <div class="form-group text-center">
+      <div class="d-flex justify-content-center">
+        <a href="/">tenho cadastro</a>
+      </div>
+    </div>
   </form>
-</body>
-</html>
+</div>
+
+{% endblock %}
