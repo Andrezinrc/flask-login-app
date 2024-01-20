@@ -3,28 +3,30 @@
 {% block conteudo %}
 
 <div class="container mt-5">
-  <form action="" method="post" class="mx-auto" style="max-width: 400px;">
-    <h1 class="titulo">Cadastro</h1>
+  <form action="" method="post" class="formulario mx-auto p-4" style="max-width: 400px;">
+    <h1 class="text-warning">Cadastro</h1>
     <div class="form-group">
-      <label>Nome</label>
-      {{ form.nome(class="form-control", placeholder="Informe seu e-mail") }}
+      <label class="text-light" >Nome Completo</label>
+      {{ form.nome(class="form-control bg-transparent", placeholder="Informe seu nome completo") }}
     </div>
     <div class="form-group">
-      <label>E-mail</label>
-      {{ form.email(class="form-control", placeholder="Informe seu e-email") }}
+      <label class="text-light">E-mail</label>
+      {{ form.email(class="form-control bg-transparent", placeholder="Informe seu e-email") }}
     </div>
     <div class="form-group">
-      <label>Senha</label>
-      {{ form.senha(class="form-control", placeholder="Crie sua senha") }}
+      <label class="text-light">Senha</label>
+      {{ form.senha(class="form-control bg-transparent", placeholder="Crie sua senha") }}
     </div>
     <div class="form-group">
-      <label>Confirme a senha</label>
-      {{ form.csenha(class="form-control", placeholder="Confirme sua senha") }}
+      <label class="text-light">Confirme a senha</label>
+      {{ form.csenha(class="form-control bg-transparent", placeholder="Confirme sua senha") }}
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-warning btn-block btn-md">Cadastrar</button>
+    </div>
     <div class="form-group text-center">
       <div class="d-flex justify-content-center">
-        <a href="/">tenho cadastro</a>
+        <a class="text-warning" href="/">Fazer login</a>
       </div>
     </div>
   </form>
